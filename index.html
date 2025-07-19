@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dev Tools Cheatsheet: Git, Docker, Bash, and more. Fast, responsive, and SEO-friendly.">
+  <title>Dev Tools Cheatsheet</title>
+  <!-- Bootstrap CDN for responsive grid -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="mb-4 text-center">Dev Tools Cheatsheet</h1>
+    <!-- Optional search/filter bar -->
+    <div class="mb-4">
+      <input type="text" id="searchInput" class="form-control" placeholder="Search commands...">
+    </div>
+    <div class="row" id="cheatsheetGrid">
+      <!-- Cheat sheet cards will go here -->
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="bash">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Bash</h5>
+            <ul>
+              <li><strong>List files:</strong> <code>ls -la</code></li>
+              <li><strong>Find text:</strong> <code>grep "text" file</code></li>
+              <li><strong>Change dir:</strong> <code>cd /path</code></li>
+              <li><strong>Copy file:</strong> <code>cp src dest</code></li>
+              <li><strong>Move file:</strong> <code>mv src dest</code></li>
+              <li><strong>Remove file:</strong> <code>rm file</code></li>
+              <li><strong>Show disk usage:</strong> <code>du -sh *</code></li>
+              <li><strong>Show free space:</strong> <code>df -h</code></li>
+              <li><strong>Find files:</strong> <code>find . -name "*.txt"</code></li>
+              <li><strong>Show running processes:</strong> <code>ps aux</code></li>
+              <li><strong>Kill process:</strong> <code>kill -9 &lt;pid&gt;</code></li>
+              <li><strong>Archive files:</strong> <code>tar -czvf out.tar.gz dir/</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="ubuntu">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Ubuntu</h5>
+            <ul>
+              <li><strong>Update packages:</strong> <code>sudo apt update</code></li>
+              <li><strong>Upgrade packages:</strong> <code>sudo apt upgrade</code></li>
+              <li><strong>Install package:</strong> <code>sudo apt install &lt;pkg&gt;</code></li>
+              <li><strong>Remove package:</strong> <code>sudo apt remove &lt;pkg&gt;</code></li>
+              <li><strong>Show disk usage:</strong> <code>df -h</code></li>
+              <li><strong>Show memory usage:</strong> <code>free -h</code></li>
+              <li><strong>Reboot:</strong> <code>sudo reboot</code></li>
+              <li><strong>Shutdown:</strong> <code>sudo shutdown now</code></li>
+              <li><strong>Check system info:</strong> <code>uname -a</code></li>
+              <li><strong>List users:</strong> <code>cat /etc/passwd</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="vim">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Vim</h5>
+            <ul>
+              <li><strong>Insert mode:</strong> <code>i</code></li>
+              <li><strong>Save & quit:</strong> <code>:wq</code></li>
+              <li><strong>Quit without saving:</strong> <code>:q!</code></li>
+              <li><strong>Search:</strong> <code>/text</code></li>
+              <li><strong>Replace:</strong> <code>:%s/old/new/g</code></li>
+              <li><strong>Undo:</strong> <code>u</code></li>
+              <li><strong>Redo:</strong> <code>Ctrl+r</code></li>
+              <li><strong>Delete line:</strong> <code>dd</code></li>
+              <li><strong>Copy line:</strong> <code>yy</code></li>
+              <li><strong>Paste line:</strong> <code>p</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="git">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Git</h5>
+            <ul>
+              <li><strong>Clone repo:</strong> <code>git clone &lt;url&gt;</code></li>
+              <li><strong>Status:</strong> <code>git status</code></li>
+              <li><strong>Commit:</strong> <code>git commit -m "msg"</code></li>
+              <li><strong>Push:</strong> <code>git push</code></li>
+              <li><strong>Pull:</strong> <code>git pull</code></li>
+              <li><strong>Log:</strong> <code>git log --oneline</code></li>
+              <li><strong>Branch:</strong> <code>git branch</code></li>
+              <li><strong>Checkout:</strong> <code>git checkout &lt;branch&gt;</code></li>
+              <li><strong>Merge:</strong> <code>git merge &lt;branch&gt;</code></li>
+              <li><strong>Stash:</strong> <code>git stash</code></li>
+              <li><strong>Show remote:</strong> <code>git remote -v</code></li>
+              <li><strong>Show diff:</strong> <code>git diff</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="docker">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Docker</h5>
+            <ul>
+              <li><strong>Build image:</strong> <code>docker build -t name .</code></li>
+              <li><strong>Run container:</strong> <code>docker run -it name</code></li>
+              <li><strong>List containers:</strong> <code>docker ps -a</code></li>
+              <li><strong>Remove image:</strong> <code>docker rmi name</code></li>
+              <li><strong>Stop container:</strong> <code>docker stop &lt;container&gt;</code></li>
+              <li><strong>Remove container:</strong> <code>docker rm &lt;container&gt;</code></li>
+              <li><strong>Exec into container:</strong> <code>docker exec -it &lt;container&gt; bash</code></li>
+              <li><strong>View logs:</strong> <code>docker logs &lt;container&gt;</code></li>
+              <li><strong>List images:</strong> <code>docker images</code></li>
+              <li><strong>Prune unused:</strong> <code>docker system prune</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="kubernetes">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Kubernetes</h5>
+            <ul>
+              <li><strong>Get pods:</strong> <code>kubectl get pods</code></li>
+              <li><strong>Get services:</strong> <code>kubectl get svc</code></li>
+              <li><strong>Describe pod:</strong> <code>kubectl describe pod &lt;name&gt;</code></li>
+              <li><strong>Apply manifest:</strong> <code>kubectl apply -f file.yaml</code></li>
+              <li><strong>Delete pod:</strong> <code>kubectl delete pod &lt;name&gt;</code></li>
+              <li><strong>Logs:</strong> <code>kubectl logs &lt;pod&gt;</code></li>
+              <li><strong>Exec into pod:</strong> <code>kubectl exec -it &lt;pod&gt; -- bash</code></li>
+              <li><strong>Get nodes:</strong> <code>kubectl get nodes</code></li>
+              <li><strong>Scale deployment:</strong> <code>kubectl scale deployment &lt;name&gt; --replicas=3</code></li>
+              <li><strong>Port forward:</strong> <code>kubectl port-forward svc/&lt;name&gt; 8080:80</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="ansible">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Ansible</h5>
+            <ul>
+              <li><strong>Run playbook:</strong> <code>ansible-playbook playbook.yml</code></li>
+              <li><strong>Ping hosts:</strong> <code>ansible all -m ping</code></li>
+              <li><strong>List hosts:</strong> <code>ansible-inventory --list</code></li>
+              <li><strong>Ad-hoc command:</strong> <code>ansible all -m shell -a 'uptime'</code></li>
+              <li><strong>Check mode:</strong> <code>ansible-playbook playbook.yml --check</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="terraform">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Terraform</h5>
+            <ul>
+              <li><strong>Init:</strong> <code>terraform init</code></li>
+              <li><strong>Plan:</strong> <code>terraform plan</code></li>
+              <li><strong>Apply:</strong> <code>terraform apply</code></li>
+              <li><strong>Destroy:</strong> <code>terraform destroy</code></li>
+              <li><strong>Show state:</strong> <code>terraform show</code></li>
+              <li><strong>List resources:</strong> <code>terraform state list</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="helm">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Helm</h5>
+            <ul>
+              <li><strong>List releases:</strong> <code>helm list</code></li>
+              <li><strong>Install chart:</strong> <code>helm install name chart</code></li>
+              <li><strong>Upgrade release:</strong> <code>helm upgrade name chart</code></li>
+              <li><strong>Uninstall release:</strong> <code>helm uninstall name</code></li>
+              <li><strong>Show values:</strong> <code>helm show values chart</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="jenkins">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Jenkins</h5>
+            <ul>
+              <li><strong>Restart Jenkins:</strong> <code>sudo systemctl restart jenkins</code></li>
+              <li><strong>View logs:</strong> <code>sudo journalctl -u jenkins</code></li>
+              <li><strong>Install plugin:</strong> <code>Manage Jenkins &gt; Manage Plugins</code></li>
+              <li><strong>Reload config:</strong> <code>Manage Jenkins &gt; Reload Configuration from Disk</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="awscli">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">AWS CLI</h5>
+            <ul>
+              <li><strong>Configure:</strong> <code>aws configure</code></li>
+              <li><strong>List S3 buckets:</strong> <code>aws s3 ls</code></li>
+              <li><strong>Copy to S3:</strong> <code>aws s3 cp file.txt s3://bucket/</code></li>
+              <li><strong>List EC2:</strong> <code>aws ec2 describe-instances</code></li>
+              <li><strong>List IAM users:</strong> <code>aws iam list-users</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 cheatsheet-card" data-category="vim">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Vim</h5>
+            <ul>
+              <li><strong>Insert mode:</strong> <code>i</code></li>
+              <li><strong>Save & quit:</strong> <code>:wq</code></li>
+              <li><strong>Quit without saving:</strong> <code>:q!</code></li>
+              <li><strong>Search:</strong> <code>/text</code></li>
+              <li><strong>Replace:</strong> <code>:%s/old/new/g</code></li>
+              <li><strong>Undo:</strong> <code>u</code></li>
+              <li><strong>Redo:</strong> <code>Ctrl+r</code></li>
+              <li><strong>Delete line:</strong> <code>dd</code></li>
+              <li><strong>Copy line:</strong> <code>yy</code></li>
+              <li><strong>Paste line:</strong> <code>p</code></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
